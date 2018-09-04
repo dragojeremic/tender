@@ -2,6 +2,7 @@ package ch.olmero.tender.service.dto;
 
 
 import ch.olmero.tender.domain.TenderStatus;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -19,12 +20,16 @@ import java.util.Objects;
 @Builder
 public class TenderDTO implements Serializable {
 
+    @ApiModelProperty(notes = "Generated id of a tender")
     private Long id;
 
+    @ApiModelProperty(notes = "Short description of a tender")
     private String description;
 
+    @ApiModelProperty(notes = "Id of an issues of a tender", required = true)
     private Long issuerId;
 
+    @ApiModelProperty(notes = "Current status of a tender")
     private TenderStatus status;
 
 
