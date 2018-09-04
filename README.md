@@ -1,4 +1,5 @@
 #Tender
+
 This application was created with SPRING INITIALIZR. You can find documentation and help at [https://start.spring.io/](https://start.spring.io/).
 Purpose of the application is to create a simple REST API with Spring boot.
 
@@ -16,7 +17,7 @@ The service is just a simple tender review REST service. It uses an in-memory da
 
 #### Offer Resource
 
-_A. Create new Offer
+A. Create new Offer
 ```
 POST /offers
 Accept: application/json
@@ -34,7 +35,7 @@ RESPONSE: HTTP 200
 Location header: http://localhost:8080/offers       
 ```
 
-_B. List of offers have been returned for selected bidder-tender combination
+B. List of offers have been returned for selected bidder-tender combination
 ```
 GET /offers
 Content-Type: application/json
@@ -56,7 +57,7 @@ RESPONSE: HTTP 200
 Location header: http://localhost:8080/offers?bidderId=0&tenderId=0
 ```
 
-_C. Marks offer as accepted and closes related tender.
+C. Marks offer as accepted and closes related tender.
 ```
 POST /offers/{offerId}/accept
 Accept: application/json
@@ -76,7 +77,7 @@ Location header: http://localhost:8080/offers/0/accept
 
 #### Tender Resource
 
-_A. Create new Tender
+A. Create new Tender
 ```
 POST /tenders
 Accept: application/json
@@ -93,7 +94,7 @@ RESPONSE: HTTP 200
 Location header: http://localhost:8080/tenders       
 ```
 
-_B. Returns all tenders in the system
+B. Returns all tenders in the system
 ```
 POST /tenders
 Accept: application/json
@@ -112,7 +113,7 @@ RESPONSE: HTTP 200
 Location header: http://localhost:8080/tenders       
 ```
 
-_B. Returns filtered list of tenders based on issuer id
+C. Returns filtered list of tenders based on issuer id
 ```
 POST /tenders/filter
 Accept: application/json
