@@ -2,6 +2,7 @@ package ch.olmero.tender.service.dto;
 
 
 import ch.olmero.tender.domain.OfferStatus;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,14 +21,19 @@ import java.util.Objects;
 @Builder
 public class OfferDTO implements Serializable {
 
+    @ApiModelProperty(notes = "Generated id of an offer")
     private Long id;
 
+    @ApiModelProperty(notes = "Description of the offer")
     private String description;
 
+    @ApiModelProperty(notes = "Id of related tender", required = true)
     private Long tenderId;
 
+    @ApiModelProperty(notes = "Id of bidder who is making the offet", required = true)
     private Long bidderId;
 
+    @ApiModelProperty(notes = "Current status of the offer")
     private OfferStatus status;
 
     @Override
